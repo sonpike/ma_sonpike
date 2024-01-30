@@ -1,17 +1,25 @@
 version: '3'
 services:
-  ma_sonpike:
+  app:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: .docker/app/Dockerfile
     expose:
       - 3000
 
-  nginx_proxy:
+  nginx:
     image: nginx:latest
     ports:
       - "8000:80"
+      - "4430:443"
     volumes:
       - .docker/nginx/nginx.conf:/etc/nginx/nginx.conf
     depends_on:
-      - ma_sonpike
+      - app
+
+  tor:
+    build:
+      context: .docker/tor
+      dockerfile: Dockerfile
+    depends_on:
+      - nginx
