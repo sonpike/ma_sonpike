@@ -5,5 +5,6 @@ RUN cargo build --release
 
 FROM scratch
 COPY --from=builder /home/rust/src/target/x86_64-unknown-linux-musl/release/ma_sonpike /
+COPY --from=builder /home/rust/src/assets /assets
 EXPOSE 3000
 CMD ["/ma_sonpike"]
