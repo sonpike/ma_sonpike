@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block style %}
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+        color: #333;
+    }
+
+    h1 {
+        color: #3498db;
+    }
+
+    h2 {
+        color: #3498db;
+    }
+
+    h3 {
+        color: #3498db;
+    }
+
+    p {
+        margin-bottom: 10px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 5px;
+    }
+
+    .experience,
+    .education {
+        margin-bottom: 20px;
+    }
+</style>
+{% endblock style %}
+
+
+{% block body %}
+<body>
+<h1>Mason Anthony Pike</h1>
+<p>Développeur | PHP · Rust · Java · Python</p>
+<p>Paris et périphérie</p>
+
+<section class="experience">
+    <h2>Expérience</h2>
+
+    <h3>Amelia (by Regourd Aviation) - Développeur d’applications Web</h3>
+    <p>avril 2023 - Présent (10 mois)</p>
+    <p>Ville de Paris, Île-de-France, France</p>
+    <ul>
+        <li>J'ai activement contribué au développement d'une gamme diversifiée de solutions logicielles, notamment des
+            API, des applications mobiles, des applications web, des applications console, des scripts d'automatisation
+            et des bases de données.</li>
+        <li>J'ai joué un rôle de premier plan dans la conduite de notre application phare depuis sa phase de pré-lancement
+            jusqu'à la réussite des tests bêta.</li>
+        <li>J'ai cultivé des partenariats solides avec diverses équipes internes interfonctionnelles pour fournir des solutions
+            logicielles sur mesure.</li>
+    </ul>
+    <p>Technologies Clés: PHP [Symfony, Laravel], Javascript [Typescript, React], Swift [SwiftUI], SQL [MySQL], Python,
+        JetBrains</p>
+</section>
+
+<section class="experience">
+    <h3>The Turner Learning Center - Gestionnaire administratif et Coordinateur pédagogique</h3>
+    <p>février 2021 - avril 2023 (2 ans 3 mois)</p>
+    <p>Ville de Paris, Île-de-France, France</p>
+    <p>Responsable de l'application correcte du programme scolaire, de la formation des enseignants nouveaux et expérimentés,
+        de la supervision directe d'une équipe de 7 à 10 enseignants, de la documentation et de la planification des cours,
+        et de la production de matériel pédagogique et de formation.</p>
+</section>
+
+<!-- Additional experience sections go here -->
+
+<section class="education">
+    <h2>Formation</h2>
+
+    <h3>The University of London Institute in Paris - Master of Arts - MA, Urbanologie : histoire et culture</h3>
+    <p>(septembre 2019 - septembre 2021)</p>
+
+    <h3>3W Academy - Alternance, Concepteur développeur d’applications</h3>
+    <p>(juin 2023 - juin 2024)</p>
+
+    <h3>Georgia State University - Bachelor of Arts - BA, Histoire</h3>
+    <p>(septembre 2015 - mai 2019)</p>
+
+    <!-- Additional education sections go here -->
+</section>
+</body>
+{% endblock body %}

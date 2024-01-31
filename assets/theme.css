@@ -1,20 +1,64 @@
-html {
-    min-width: 400px;
-    margin: 0;
-    padding: 1rem;
+:root {
+    --main-background: #222;
+    --text-color: #ddd;
+    --header-background: #2c3e50;
+    --header-text-color: #fff;
+    --section-background: #333;
+    --section-shadow: rgba(0, 0, 0, 0.3);
+    --section-max-width: 800px;
+    --section-text-color: #3498db; /* Keeping a hint of blue for section headings */
+    --footer-background: #2c3e50;
+    --footer-text-color: #fff;
 }
 
 body {
-    width: 100%;
-    height: 100%;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: var(--main-background);
+    color: var(--text-color);
+}
 
-    color: #666666;
-    background-color: #212121;
-
+header {
+    background-color: var(--header-background);
+    color: var(--header-text-color);
     text-align: center;
-    font-size: 28px;
-    font-family: sans-serif;
-    line-height: 1.5;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 5px 0 0;
+}
+
+section {
+    max-width: var(--section-max-width);
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--section-background);
+    box-shadow: 0 0 10px var(--section-shadow);
+}
+
+section h2 {
+    color: var(--section-text-color);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--footer-background);
+    color: var(--footer-text-color);
 }

@@ -1,6 +1,6 @@
 mod templates;
 
-use crate::templates::MyTemplate;
+use crate::templates::{HomeTemplate, ResumeTemplate};
 use askama::Template;
 use axum::http::StatusCode;
 use axum::response::IntoResponse;
@@ -28,7 +28,8 @@ async fn main() {
         .init();
 
     let app = Router::new()
-        .route("/", get(handler))
+        .route("/", get(home))
+        .route("/resume", get(resume))
         .nest_service("/assets", ServeDir::new("assets"));
 
     let listener = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap();
@@ -36,10 +37,14 @@ async fn main() {
     axum::serve(listener, app).await.unwrap();
 }
 
-async fn handler() -> impl IntoResponse {
+async fn home() -> impl IntoResponse {
     tracing::debug!("Hello, Debug World!");
     tracing::warn!("Hello, Warning World!");
-    let template = MyTemplate {};
-    let reply_html = template.render().unwrap();
-    (StatusCode::OK, Html(reply_html).into_response())
+    let template = HomeTemplate {};
+    (StatusCode::OK, Html(template.render().unwrap()).into_response())
+}
+
+async fn resume() -> impl IntoResponse {
+    let template = ResumeTemplate {};
+    (StatusCode::OK, Html(template.render().unwrap()).into_response())
 }
