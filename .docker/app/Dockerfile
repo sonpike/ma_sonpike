@@ -1,10 +1,20 @@
-FROM clux/muslrust:stable as builder
-WORKDIR /home/rust/src
-COPY . .
-RUN cargo build --release
+FROM rust:alpine AS chef
+RUN apk add --no-cache musl-dev
+RUN cargo install cargo-chef
+WORKDIR app
 
-FROM scratch
-COPY --from=builder /home/rust/src/target/x86_64-unknown-linux-musl/release/ma_sonpike /
-COPY --from=builder /home/rust/src/assets /assets
-EXPOSE 3000
-CMD ["/ma_sonpike"]
+FROM chef AS planner
+COPY . .
+RUN cargo chef prepare --recipe-path recipe.json
+
+FROM chef AS builder
+COPY --from=planner /app/recipe.json recipe.json
+RUN cargo chef cook --release --recipe-path recipe.json
+# No idea why this second copy is needed
+COPY . .
+RUN cargo build --release --bin ma_sonpike
+
+FROM alpine:latest AS runtime
+COPY assets /assets
+COPY --from=builder /app/target/release/ma_sonpike .
+ENTRYPOINT ["/ma_sonpike"]

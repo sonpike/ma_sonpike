@@ -3,7 +3,15 @@ name = "ma_sonpike"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[[bin]]
+name="ma_sonpike"
+bench=false
+test=false
+
+[profile.release]
+strip = true
+opt-level = "z"
+lto = true
 
 [dependencies]
 askama = { version = "0.12.1", features = ["with-axum"] }
