@@ -5,3 +5,4 @@ compose.yml
 .docker/app
 .docker/tor
 .docker/nginx/Dockerfile
+debug.log

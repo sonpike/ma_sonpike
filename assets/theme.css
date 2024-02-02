@@ -36,11 +36,9 @@ header p {
 }
 
 section {
-    max-width: var(--section-max-width);
-    margin: 20px auto;
-    padding: 20px;
     background-color: var(--section-background);
-    box-shadow: 0 0 10px var(--section-shadow);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 section h2 {
@@ -54,6 +52,53 @@ ul {
 
 li {
     margin-bottom: 5px;
+}
+
+
+#home-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 10px;
+    grid-template-areas:
+                "snowflake-message snowflake-iframe"
+                "about experience"
+                "education contact";
+}
+
+#snowflake-box {
+    grid-area: iframe;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+}
+
+#snowflake-message {
+    grid-area: snowflake-message;
+}
+#snowflake-iframe {
+    grid-area: snowflake-iframe;
+}
+
+#about {
+    grid-area: about;
+}
+
+#experience {
+    grid-area: experience;
+}
+
+#education {
+    grid-area: education;
+}
+
+.contact-info {
+    grid-area: contact;
+}
+
+.column {
+    margin: 20px;
 }
 
 footer {

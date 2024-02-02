@@ -1,51 +1,51 @@
-{% extends "base.html" %}
+{% extends "base/layout.html" %}
 
-{% block style %}<link rel="stylesheet" href="/assets/theme.css">{% endblock style %}
+{% block style %}
+<link rel="stylesheet" href="/assets/theme.css">{% endblock style %}
 
 {% block body %}
 <header>
-    <h1>Your Name</h1>
-    <p>Web Developer</p>
+    <h1>Mason Pike</h1>
+    <p>Software/Web Developer</p>
 </header>
 
-<section>
-    <h2>About Me</h2>
-    <p>
-        Hello! I am a passionate web developer with a strong background in front-end and back-end technologies.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in quam a justo interdum fermentum eu vel
-        enim. Curabitur accumsan, nulla at aliquet facilisis, sapien erat efficitur erat.
-    </p>
-</section>
+<div id="home-container">
+    <section id="snowflake-message" class="column">
+        <h2>While you're here....</h2>
+        <p>why not help someone out there avoid internet censorship by opening up a snowflake proxy ? Just click
+        on the switch there and you're good to go.</p>
+    </section>
+    <section id="snowflake-iframe" class="column">
+        <iframe src="https://snowflake.torproject.org/embed.html" width="320" height="240"></iframe>
+    </section>
+    <section id="about" class="column">
+        <h2>About Me</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in quam a justo interdum fermentum eu vel
+            enim. Curabitur accumsan, nulla at aliquet facilisis, sapien erat efficitur erat.
+        </p>
+    </section>
 
-<section>
-    <h2>Skills</h2>
-    <ul>
-        <li>Rust</li>
-        <li>PHP</li>
-        <li>Java</li>
-        <li>SQL</li>
-    </ul>
-</section>
+    <section id="experience" class="column">
+        <h2>nfklsqjfklmsq</h2>
+        <h3>Web Developer - XYZ Company</h3>
+        <p>Developed and maintained web applications using the latest technologies. Collaborated with cross-functional
+            teams to deliver high-quality software solutions.</p>
+    </section>
 
-<section>
-    <h2>Experience</h2>
-    <h3>Web Developer - XYZ Company</h3>
-    <p>Developed and maintained web applications using the latest technologies. Collaborated with cross-functional
-        teams to deliver high-quality software solutions.</p>
-</section>
+    <section id="education" class="column">
+        <h2>somethin</h2>
+        <h3>Bachelor of Science in Computer Science - ABC University</h3>
+        <p>Graduated with honors, specialized in web development and software engineering.</p>
+    </section>
 
-<section>
-    <h2>Education</h2>
-    <h3>Bachelor of Science in Computer Science - ABC University</h3>
-    <p>Graduated with honors, specialized in web development and software engineering.</p>
-</section>
-
-<section class="contact-info">
-    <h2>Contact Information</h2>
-    <ul>
-        <li>Email: m@sonpike.net</li>
-        <li>LinkedIn: linkedin.com/in/masonapike</li>
-        <li>GitHub: github.com/sqrtM</li>
-    </ul>
-</section>
+    <section class="contact-info column">
+        <h2>Contact Information</h2>
+        <ul>
+            <li>Email: m@sonpike.net</li>
+            <li>LinkedIn: linkedin.com/in/masonapike</li>
+            <li>GitHub: github.com/sqrtM</li>
+        </ul>
+    </section>
+</div>
 {% endblock body %}

@@ -2,12 +2,14 @@ use std::fs::File;
 use std::sync::Arc;
 
 use askama::Template;
-use axum::http::StatusCode;
-use axum::response::IntoResponse;
-use axum::{response::Html, routing::get, Router};
+use axum::{
+    http::StatusCode,
+    response::{Html, IntoResponse},
+    routing::get,
+    Router,
+};
 use tower_http::services::ServeDir;
-use tracing_subscriber::fmt::layer;
-use tracing_subscriber::{filter, prelude::*};
+use tracing_subscriber::{filter, fmt::layer, prelude::*};
 
 use crate::templates::{HomeTemplate, ResumeTemplate};
 
