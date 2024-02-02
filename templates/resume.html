@@ -1,96 +1,134 @@
-{% extends "base.html" %}
+{% extends "base/layout.html" %}
 
 {% block style %}
 <style>
-    body {
-        font-family: 'Arial', sans-serif;
-        line-height: 1.6;
-        margin: 20px;
-        color: #333;
-    }
-
-    h1 {
-        color: #3498db;
-    }
-
-    h2 {
-        color: #3498db;
-    }
-
-    h3 {
-        color: #3498db;
-    }
-
-    p {
-        margin-bottom: 10px;
-    }
-
-    ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    li {
-        margin-bottom: 5px;
-    }
-
-    .experience,
-    .education {
-        margin-bottom: 20px;
-    }
 </style>
 {% endblock style %}
 
-
 {% block body %}
 <body>
-<h1>Mason Anthony Pike</h1>
-<p>Développeur | PHP · Rust · Java · Python</p>
-<p>Paris et périphérie</p>
 
-<section class="experience">
-    <h2>Expérience</h2>
+<h2>Curriculum Vitae -- Mason Anthony Pike</h2>
+<span><b>Last updated:</b> February 2024</span><br>
+<span><b>Born:</b> 1997, Georgia, United States</span><br>
+<span><b>Residing:</b> Ile-de-France</span>
 
-    <h3>Amelia (by Regourd Aviation) - Développeur d’applications Web</h3>
-    <p>avril 2023 - Présent (10 mois)</p>
-    <p>Ville de Paris, Île-de-France, France</p>
+
+<blockquote>
+    <h3>Education</h3>
+</blockquote>
+
+<ul>
     <ul>
-        <li>J'ai activement contribué au développement d'une gamme diversifiée de solutions logicielles, notamment des
-            API, des applications mobiles, des applications web, des applications console, des scripts d'automatisation
-            et des bases de données.</li>
-        <li>J'ai joué un rôle de premier plan dans la conduite de notre application phare depuis sa phase de pré-lancement
-            jusqu'à la réussite des tests bêta.</li>
-        <li>J'ai cultivé des partenariats solides avec diverses équipes internes interfonctionnelles pour fournir des solutions
-            logicielles sur mesure.</li>
+        <li>
+            2024 3W Academy -- Professional Title (Software Development)
+        </li>
+        <li>
+            2021 University of London, Institute in Paris -- M.A. (Philosophy)
+        </li>
+        <li>
+            2019 Georgia State University -- B.A. (History)
+        </li>
     </ul>
-    <p>Technologies Clés: PHP [Symfony, Laravel], Javascript [Typescript, React], Swift [SwiftUI], SQL [MySQL], Python,
-        JetBrains</p>
-</section>
+</ul>
 
-<section class="experience">
-    <h3>The Turner Learning Center - Gestionnaire administratif et Coordinateur pédagogique</h3>
-    <p>février 2021 - avril 2023 (2 ans 3 mois)</p>
-    <p>Ville de Paris, Île-de-France, France</p>
-    <p>Responsable de l'application correcte du programme scolaire, de la formation des enseignants nouveaux et expérimentés,
-        de la supervision directe d'une équipe de 7 à 10 enseignants, de la documentation et de la planification des cours,
-        et de la production de matériel pédagogique et de formation.</p>
-</section>
+<blockquote>
+    <h3>Employment</h3>
+</blockquote>
 
-<!-- Additional experience sections go here -->
+<ul>
+    <ul>
+        <li>
+            2023-present, <b>Amelia Aviation</b> (Application Developer)
+        </li>
+        2019-2023, <b>The Turner Learning Center</b>
+        <ul>
+            <li>
+                2021-23, Administrative Manager
+            </li>
+            <li>
+                2021-23, Pedagogical Coordinator
+            </li>
+            <li>
+                2019-23, English Teacher
+            </li>
+        </ul>
+        <li>
+            2018-19: <b>Jimmy Carter Presidential Library and Museum</b> (Education and Cultural Outreach Assistant)
+        </li>
+        2016-19, <b>Georgia State University</b>
+        <ul>
+            <li>
+                2016-19, Research Assistant for the Department of History
+            </li>
+            <li>
+                2015-16, Research Assistant for the Department of Music
+            </li>
+        </ul>
+        <li>
+            2015-16, <b>Trion City Schools</b> (Music Teacher)
+        </li>
+    </ul>
+</ul>
 
-<section class="education">
-    <h2>Formation</h2>
+<blockquote>
+    <h4>Articles</h4>
+</blockquote>
+<ul>
+    <ul>
+        <li><i>America</i>, Studies in Urban History and Culture 2021-2022
+        </li>
+        <li><i>Imagining an Urban Future: The Invention of Ivry and Grand Paris</i>, Studies in Urban History and
+            Culture
+            2020-2021
+        </li>
+        <li><i>Love is War</i>, arrangement and co-direction with the 2016 Georgia State University Trombone Ensemble
+        </li>
+    </ul>
+</ul>
 
-    <h3>The University of London Institute in Paris - Master of Arts - MA, Urbanologie : histoire et culture</h3>
-    <p>(septembre 2019 - septembre 2021)</p>
+<blockquote>
+    <h4>Certifications</h4>
+</blockquote>
+<ul>
+    <ul>
+        <li>TOSA, PHP [933/1000] (3W Academy, 2023)</li>
+        <li>Teaching English as a Foreign Language (Georgia State University, 2019)</li>
+    </ul>
+</ul>
 
-    <h3>3W Academy - Alternance, Concepteur développeur d’applications</h3>
-    <p>(juin 2023 - juin 2024)</p>
+<blockquote>
+    <h4>Languages</h4>
+</blockquote>
+<ul>
+    <ul>
+        <li>French</li>
+        <li>English</li>
+    </ul>
+</ul>
 
-    <h3>Georgia State University - Bachelor of Arts - BA, Histoire</h3>
-    <p>(septembre 2015 - mai 2019)</p>
+<blockquote>
+    <h4>Buzzwords</h4>
+</blockquote>
+<ul>
+    <ul>
+        <li>Rust | Java | PHP | SQL</li>
+        <li>Python | Docker | OOP</li>
+        <li>Design Patterns | Linux | CI/CD</li>
+    </ul>
+</ul>
 
-    <!-- Additional education sections go here -->
-</section>
+<blockquote>
+    <h4>Other Activities</h4>
+</blockquote>
+<ul>
+    <ul>
+        <li>Open Source Contributor in the Rust Ecosystem</li>
+        <li>Composer for university wind ensembles</li>
+        <li>Occasional trombonist</li>
+        <li>System security obsessive</li>
+    </ul>
+</ul>
+
 </body>
 {% endblock body %}
