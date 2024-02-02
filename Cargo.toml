@@ -5,8 +5,6 @@ edition = "2021"
 
 [[bin]]
 name="ma_sonpike"
-bench=false
-test=false
 
 [profile.release]
 strip = true
