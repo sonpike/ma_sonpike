@@ -16,6 +16,6 @@ jobs:
         echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
         ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
     - name: connect and pull
-      run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "docker stop $(docker ps -a -q) && cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull && docker compose up -d --build"
+      run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} 'docker stop $(docker ps -a -q) && cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull && docker compose up -d --build'
     - name: cleanup
       run: rm -rf ~/.ssh
