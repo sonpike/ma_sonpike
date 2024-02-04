@@ -18,8 +18,7 @@ jobs:
 
       - name: Connect and deploy
         run: |
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} 'docker stop $(docker ps -a -q) && \
-            cd ${{ secrets.WORK_DIR }} && \
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.WORK_DIR }} 'docker-compose down && \
             git checkout ${{ secrets.MAIN_BRANCH }} && \
             git pull && \
             docker compose up -d --build'
