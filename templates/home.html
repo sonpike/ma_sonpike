@@ -13,11 +13,12 @@
     <section id="snowflake-message" class="column">
         <h2>While you're here....</h2>
         <p>why not help someone out there avoid internet censorship by opening up a snowflake proxy ? Just click
-        on the switch there and you're good to go.</p>
+            on the switch there and you're good to go.</p>
     </section>
-    <section id="snowflake-iframe" class="column">
-        <iframe src="https://snowflake.torproject.org/embed.html" width="320" height="240"></iframe>
-    </section>
+    <div id="snowflake-iframe">
+        <iframe src="https://snowflake.torproject.org/embed.html" title="snowflake" width="320" height="240"
+            frameborder="0" scrolling="no"></iframe>
+    </div>
     <section id="about" class="column">
         <h2>About Me</h2>
         <p>
@@ -26,26 +27,39 @@
         </p>
     </section>
 
-    <section id="experience" class="column">
-        <h2>nfklsqjfklmsq</h2>
-        <h3>Web Developer - XYZ Company</h3>
-        <p>Developed and maintained web applications using the latest technologies. Collaborated with cross-functional
-            teams to deliver high-quality software solutions.</p>
+    <section id="navigation" class="column">
+        <h2>Other Sites</h2>
+        <ul>
+            <li><a href="" target="_blank">blog.sonpike.net</a></li>
+            <li><a href="" target="_blank">mu.sonpike.net</a></li>
+            <li><a href="" target="_blank">git.sonpike.net</a></li>
+        </ul>
     </section>
 
-    <section id="education" class="column">
-        <h2>somethin</h2>
-        <h3>Bachelor of Science in Computer Science - ABC University</h3>
-        <p>Graduated with honors, specialized in web development and software engineering.</p>
+    <section id="resume" class="column">
+        <h2>Want to work together ?</h2>
+        <p>Wonderful! Let's make your ideas a reality.</p>
+
+        <h3>Resume:</h3>
+        <ul>
+            <li><a href="/resume" target="_blank">Simple Resume (English)</a></li>
+            <li>Simple Resume (French)</li>
+            <li>Pretty Resume (French)</li>
+        </ul>
     </section>
 
     <section class="contact-info column">
         <h2>Contact Information</h2>
         <ul>
-            <li>Email: m@sonpike.net</li>
-            <li>LinkedIn: linkedin.com/in/masonapike</li>
-            <li>GitHub: github.com/sqrtM</li>
+            <li>Email: <a href="mailto:m@sonpike.net">m@sonpike.net</a></li>
+            <li>LinkedIn: <a href="https://linkedin.com/in/masonapike" target="_blank">linkedin.com/in/masonapike</a>
+            </li>
+            <li>GitHub: <a href="https://github.com/sqrtM" target="_blank">github.com/sqrtM</a></li>
         </ul>
     </section>
 </div>
 {% endblock body %}
+
+{% block footer %}
+{% include "base/footer.html" %}
+{% endblock footer %}

@@ -47,8 +47,7 @@ fn init_logger() {
 }
 
 async fn home() -> impl IntoResponse {
-    tracing::debug!("Hello, Debug World!");
-    tracing::warn!("Hello, Warning World!");
+    tracing::debug!("New connection request");
     (
         StatusCode::OK,
         Html((HomeTemplate {}).render().unwrap()).into_response(),
